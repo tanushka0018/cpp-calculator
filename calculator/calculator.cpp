@@ -49,7 +49,9 @@ bool RunCalculatorCycle() {
     for (std::string token; std::cin >> token;) {
         if (token == "q") {
             return true;
-        } else if (token == "=") {
+        }
+
+        if (token == "=") {
             std::cout << current_value << std::endl;
         } else if (token == ":") {
             if (!ReadNumber(current_value)) return false;
